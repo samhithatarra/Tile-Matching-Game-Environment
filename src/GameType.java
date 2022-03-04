@@ -1,3 +1,3 @@
 public enum GameType {
-    BATTLESHIP, CONNECTFOUR
+    BATTLESHIP, TICTACTOE
 }

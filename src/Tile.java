@@ -1,5 +1,5 @@
 public class Tile {
-    int value;
-    float xPosition;
-    float yPosition;
+    String value;
+    int column;
+    int row;
 }
