@@ -5,7 +5,7 @@ public class Main {
 
         // To test board
         Board boardObj = new Board();
-        boolean gameFin = false;
+        boolean gameFin = false; // don't need this if we have a checkWinner function
         int turn = 0;   // 0 reps player 1's turn, 1 reps palyer 2's turn
 
         // User input
