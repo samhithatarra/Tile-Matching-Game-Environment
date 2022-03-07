@@ -9,6 +9,10 @@ public class Board {
         boardArr = new Tile[ROW][COL];
     }
 
+    public Board(int rowCount, int columnCount) {
+        boardArr = new Tile[rowCount][columnCount];
+    }
+
     public void createBoard(GameType gType) {
 
         // BATTLESHIP
