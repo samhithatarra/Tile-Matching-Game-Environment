@@ -7,16 +7,17 @@ public class State
     public State(int totalPlayers)
     {
         this.totalPlayers = totalPlayers;
+        turn = 1;
     }
 
     public int nextTurn()
     {
-        this.turn = this.turn + 1;
-        if (this.turn > totalPlayers)
+        turn++;
+        if (turn > totalPlayers)
         {
-            this.turn = 1;
+            turn = 1;
         }
-        return this.turn;
+        return turn;
     }
 
     public void updateBoard()
