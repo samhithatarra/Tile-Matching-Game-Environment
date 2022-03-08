@@ -8,9 +8,7 @@ public class ConnectFour {
     int playerTurn = 0;
     Scanner input = new Scanner(System.in);
 
-    public ConnectFour() {
-
-    }
+    public ConnectFour() { }
 
     public boolean isValidInput() { return false; }
 

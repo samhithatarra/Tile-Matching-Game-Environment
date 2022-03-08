@@ -6,7 +6,7 @@ public class Main {
         // To test board
         Board boardObj = new Board();
         boolean gameFin = false; // don't need this if we have a checkWinner function
-        int turn = 0;   // 0 reps player 1's turn, 1 reps palyer 2's turn
+        int turn = 0;   // 0 reps player 1's turn, 1 reps player 2's turn
 
         // User input
         Scanner input = new Scanner(System.in);
@@ -29,11 +29,7 @@ public class Main {
                 System.out.println("Enter the column you want to make your move in (start at 0)");
                 int colInput = input.nextInt();
                 
-                Tile move1 = new Tile();
-                move1.value = "X";
-                move1.row = rowInput;
-                move1.column = colInput;
-
+                Tile<String> move1 = new Tile<String>("X", rowInput, colInput);
                 boardObj.updateBoard(move1, GameType.TICTACTOE);
                 turn = 1;
             }
@@ -48,11 +44,7 @@ public class Main {
                 System.out.println("Enter the column you want to make your move in (start at 0)");
                 int colInput = input.nextInt();
                 
-                Tile move2 = new Tile();
-                move2.value = "O";
-                move2.row = rowInput;
-                move2.column = colInput;
-
+                Tile<String> move2 = new Tile<String>("O", rowInput, colInput);
                 boardObj.updateBoard(move2, GameType.TICTACTOE);
                 turn = 0;
             } 

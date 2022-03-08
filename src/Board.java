@@ -31,12 +31,7 @@ public class Board {
         if (gType == GameType.TICTACTOE) {
             for (int row = 0; row < boardArr.length; row++) {
                 for (int col = 0; col < boardArr[0].length; col++) {
-
-                    boardArr[row][col] = new Tile();
-                    Tile tile = boardArr[row][col];
-                    tile.column = col;
-                    tile.row = row;
-                    tile.value = "_";
+                    boardArr[row][col] = new Tile<String>("_", row, col);
                 }
             }
         }
