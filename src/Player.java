@@ -10,6 +10,7 @@ public class Player
     public Player(String name)
     {
         this.name = name;
+        score = 0;
     }
 
     public String getName()
@@ -24,6 +25,6 @@ public class Player
 
     public void incScore()
     {
-        score = score + 1;
+        score++;
     }
 }
