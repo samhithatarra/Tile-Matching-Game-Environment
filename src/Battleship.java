@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ConnectFour {
+public class Battleship {
 
     ArrayList<String> players = new ArrayList<>();
     Board board = null;
     int playerTurn = 0;
     Scanner input = new Scanner(System.in);
 
-    public ConnectFour() { }
+    public Battleship() { }
 
     public boolean isValidInput() { return false; }
 
