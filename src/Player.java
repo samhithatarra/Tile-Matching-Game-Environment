@@ -1,6 +1,4 @@
-//Aliyah & Sam: Connect4, Board
-//Becky & Lancy: Battleship, Player, State
-//Jules & Mikey: Battleship, Main/Controller, Tile, GameType
+
 
 public class Player 
 {
