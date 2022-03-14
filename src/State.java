@@ -27,7 +27,6 @@ public class State<T>
     
     // Return true if there is a winner at the current state.
     // Return false otherwise
-    // TODO: change return type so that it returns the winner, if any
     public boolean checkWin(Board<T> board)
     {
         ArrayList<ArrayList<Tile<T>>> boardArray = board.getBoard();

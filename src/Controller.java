@@ -78,23 +78,11 @@ public class Controller
         }
     }
 
-    public void incrCurrPlayerScore()
+    public void incrPlayerScore(String name)
     {
         for(Player p : players)
         {
-            if(p.getName().equals(currPlayer))
-            {
-                p.incScore();
-                break;
-            }
-        }
-    }
-
-    public void incrPlayer2Score()
-    {
-        for(Player p : players)
-        {
-            if(p.getName().equals(player2))
+            if(p.getName().equals(name))
             {
                 p.incScore();
                 break;
@@ -105,5 +93,18 @@ public class Controller
     public int getTotalPlayers()
     {
         return players.size();
+    }
+
+    public int getUserScore(String name)
+    {
+        for(Player p : players)
+        {
+            if(p.getName().equals(name))
+            {
+                
+                return p.getScore();
+            }
+        }
+        return -1;
     }
 }
