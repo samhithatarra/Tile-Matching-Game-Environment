@@ -12,12 +12,13 @@ public class Game {
 
     public void start() { 
 
-        boolean shouldExit = false;
+        boolean shouldExit = true;
         while(shouldExit)
         {
             System.out.print("1.) Add new user\n" +
                              "2.) Login\n" +
-                             "3.) Quit\n" +
+                             "3.) View user scores\n" + 
+                             "4.) Quit\n" +
                              "Enter Command Number: ");
             int command = sc.nextInt();
             sc.nextLine(); // flush scanner after int input
@@ -31,13 +32,21 @@ public class Game {
                     presentLogInDialog();
                     break;
                 case 3:
-                    shouldExit = true;
+                    viewCurrUserScore();
+                    break;
+                case 4:
+                    shouldExit = false;
                     break;
                 default:
                     System.out.println("\nNot an option!\n");
             }
 
         }
+    }
+
+    public void viewCurrUserScore()
+    {
+        System.out.println("\n" + ctrl.getCurrPlayer() + "'s total score: " + ctrl.getUserScore(ctrl.getCurrPlayer()) + "\n");
     }
 
     public void addNewUser() { 
