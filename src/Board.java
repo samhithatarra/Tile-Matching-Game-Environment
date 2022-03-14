@@ -72,7 +72,6 @@ public class Board<T>
         }
     }
 
-    // TODO: change return type so that it returns the winner, if any
     public boolean checkWin()
     {
         return gameState.checkWin(this);

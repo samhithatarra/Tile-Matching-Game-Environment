@@ -85,6 +85,7 @@ public class Main
             System.out.println("Select a game from the list below");
             System.out.println("1.) Tic-Tac-Toe");
             System.out.println("2.) Connect Four");
+            System.out.println("3.) View score");
             System.out.print("Enter game: ");
             int game = sc.nextInt();
             sc.nextLine(); // flush scanner after int input
@@ -151,7 +152,7 @@ public class Main
             {
                 System.out.print("Enter the column to drop: ");
                 int column = sc.nextInt();
-                if(!c4.isValidColumn(column - 1))
+                if(!c4.isValidColumn(column - 1) || c4.getBottomEmptyRow(column - 1) < 0)
                 {
                     System.out.println("Invalid column, please try again\n");
                     continue;
@@ -167,7 +168,8 @@ public class Main
                 break;
             }
         }
-        if(c4.getTurn() % 2 == 1)
+        c4.printBoard();
+        if(c4.getTurn() % 2 == 0)
         {
             System.out.println("\n" + ctrl.getCurrPlayer() + " wins!");
         }
