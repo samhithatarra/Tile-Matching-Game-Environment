@@ -85,4 +85,34 @@ public class Board<T>
     {
         return gameState.getTurn();
     }
+
+    // Prints the board to console
+    // If a tile has a value, print the value in the appropriate row and column
+    // If a tile has no value, print '.' in the appropriate row and column
+    public void printBoard()
+    {
+        for(int row = 0; row < height; row++)
+        {
+            for(int col = 0; col < width; col++)
+            {
+                Tile<T> currentTile = boardArray.get(row).get(col);
+                // if tile has no value, print '.'
+                if(currentTile == null)
+                {
+                    System.out.print(" . ");
+                }
+                else
+                {
+                    System.out.print(" " + currentTile.getValue() + " ");
+                }
+            }
+            System.out.println();
+        }
+        // print column numbers
+        for(int i = 1; i <= width; i++)
+        {
+            System.out.print(" " + i + " ");
+        }
+        System.out.println();
+    }
 }
