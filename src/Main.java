@@ -54,11 +54,6 @@ public class Main
 
     public static void login()
     {
-        if(ctrl.getTotalPlayers() < 2)
-        {
-            System.out.println("\nNot enough users to play. Please add another user\n");
-            return;
-        }
         while(true)
         {
             System.out.println("\nLogin as a user from the list below");
@@ -104,6 +99,7 @@ public class Main
                     viewCurrUserScore();
                     break;
                 case 4:
+                    System.out.println();
                     loopGameSelection = false;
                     break;
                 default:
@@ -114,6 +110,11 @@ public class Main
 
     public static void selectConnectFour()
     {
+        if(ctrl.getTotalPlayers() < 2)
+        {
+            System.out.println("\nNot enough users to play. Please add another user\n");
+            return;
+        }
         while(true)
         {
             System.out.println("\n" + ctrl.getCurrPlayer() + " playing as Player 1");
@@ -179,6 +180,7 @@ public class Main
                 break;
             }
         }
+        System.out.println();
         c4.printBoard();
         if(c4.getTurn() % 2 == 0)
         {
