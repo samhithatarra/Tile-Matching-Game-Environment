@@ -29,7 +29,7 @@ public class Main
                     runApp = false;
                     break;
                 default:
-                    System.out.println("\nnot an option stoopid \n-becky\n");
+                    System.out.println("\nNot an option!\n");
             }
 
         }
@@ -101,7 +101,7 @@ public class Main
                     loopGameSelection = false;
                     break;
                 default:
-                    System.out.println("\nnot an option stoopid\n");
+                    System.out.println("\nNot an option!\n");
             }
         }
     }
