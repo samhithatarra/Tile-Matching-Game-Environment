@@ -47,7 +47,7 @@ public class Main
             }
             ctrl.createProfile(name);
             break;
-        
+        }
         System.out.println();
     }
 
