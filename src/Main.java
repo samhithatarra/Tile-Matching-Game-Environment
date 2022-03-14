@@ -29,13 +29,8 @@ public class Main
                     runApp = false;
                     break;
                 default:
-<<<<<<< HEAD
                     System.out.println("\nInvalid command\n");
-=======
-                    System.out.println("\nNot an option!\n");
->>>>>>> 9b284bbf6e3a43f0785cbe47c1d4c9b5e6868621
             }
-
         }
     }
 
@@ -52,7 +47,7 @@ public class Main
             }
             ctrl.createProfile(name);
             break;
-        }
+        
         System.out.println();
     }
 
@@ -107,11 +102,7 @@ public class Main
                     loopGameSelection = false;
                     break;
                 default:
-<<<<<<< HEAD
                     System.out.println("\nInvalid command\n");
-=======
-                    System.out.println("\nNot an option!\n");
->>>>>>> 9b284bbf6e3a43f0785cbe47c1d4c9b5e6868621
             }
         }
     }
