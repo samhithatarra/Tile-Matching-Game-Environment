@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+ 
 public class Connect4Board<T> extends Board<T>
 {
     private Connect4State<T> connect4GameState;
