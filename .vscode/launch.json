@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch TicTacToe",
+            "request": "launch",
+            "mainClass": "TicTacToe",
+            "projectName": "inf122-tmge-team1_137b358a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "inf122-tmge-team1_137b358a"
+        },
+        {
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
