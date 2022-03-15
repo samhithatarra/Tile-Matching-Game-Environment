@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Game {
 
-    Controller ctrl;
-    Scanner sc;
+    public static Controller ctrl;
+    public static Scanner sc;
 
     Game() { 
         ctrl = new Controller();
@@ -13,6 +13,7 @@ public class Game {
     public void start() { 
 
         boolean shouldExit = true;
+
         while(shouldExit)
         {
             System.out.print("1.) Add new user\n" +
@@ -75,11 +76,13 @@ public class Game {
         {
             System.out.println("\nLogin as a user from the list below");
             ctrl.printPlayers();
-            System.out.print("Login as: ");
-            String name = sc.nextLine();
+            System.out.print("Login Player1 as: ");
+            String name1 = sc.nextLine();
+            System.out.print("Login Player2 as: ");
+            String name2 = sc.nextLine();
 
             // Break out of this while loop if we succesfully are able to log in a user.
-            if (logInUser(name)) {  break; }
+            if (logInUsers(name1, name2)) {  break; }
         }
         play();
     }
@@ -89,14 +92,21 @@ public class Game {
      * @param username The username belonging to the user that wishes to be logged in
      * @return true if 'username' exists in 'ctrl'
      */
-    public boolean logInUser(String username) { 
+    public boolean logInUsers(String username, String user2) { 
         if(!ctrl.playerNameExists(username))
         {
             System.out.println(username + " does not exist");
             return false;
         }
+        else if(!ctrl.playerNameExists(user2)){
+            System.out.println(user2 + " does not exist");
+            return false; 
+        }
         ctrl.loginCurrPlayer(username);
-        System.out.println("\nLogged in as " + username + "\n");
+        ctrl.loginPlayer2(user2);
+       
+        System.out.println("\nLogged in player 1 as " + username + "\n");
+        System.out.println("\nLogged in player 2 as " + user2 + "\n");
         return true;
     }
 
