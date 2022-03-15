@@ -16,6 +16,6 @@ Execute TicTacToe.jar by running `java -jar TicTacToe.jar`
 
 # ConnectFour
 
-Execute ConnectFourMain.jar by running `java -jar ConnectFour.jar`
+Execute ConnectFourMain.jar by running `java -jar ConnectFourMain.jar`
 
 [ConnectFour Documentation](https://docs.google.com/document/d/1ffCYK59im9KVj0KNFgXl52c3LIq99BY25IUkYm_9gBg/edit)
