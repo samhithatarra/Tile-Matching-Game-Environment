@@ -7,27 +7,27 @@ public class ConnectFourGame extends Game {
             System.out.println("\nNot enough users to play. Please add another user\n");
             return;
         }
-        while(true)
-        {
-            System.out.println("\n" + ctrl.getCurrPlayer() + " playing as Player 1");
-            System.out.println("Select Player 2 from the list below");
-            ctrl.printPlayersExcept(ctrl.getCurrPlayer());
-            System.out.print("Select player: ");
-            String name = sc.nextLine();
-            if(name.equals(ctrl.getCurrPlayer()))
-            {
-                System.out.println("\n" + name + " is already Player 1");
-                continue;
-            }
-            if(!ctrl.playerNameExists(name))
-            {
-                System.out.println("\n" + name + " does not exist");
-                continue;
-            }
-            ctrl.loginPlayer2(name);
-            System.out.println("\n" + name + " playing as Player 2\n");
-            break;
-        }
+        // while(true)
+        // {
+        //     System.out.println("\n" + ctrl.getCurrPlayer() + " playing as Player 1");
+        //     System.out.println("Select Player 2 from the list below");
+        //     ctrl.printPlayersExcept(ctrl.getCurrPlayer());
+        //     System.out.print("Select player: ");
+        //     String name = sc.nextLine();
+        //     if(name.equals(ctrl.getCurrPlayer()))
+        //     {
+        //         System.out.println("\n" + name + " is already Player 1");
+        //         continue;
+        //     }
+        //     if(!ctrl.playerNameExists(name))
+        //     {
+        //         System.out.println("\n" + name + " does not exist");
+        //         continue;
+        //     }
+        //     ctrl.loginPlayer2(name);
+        //     System.out.println("\n" + name + " playing as Player 2\n");
+        //     break;
+        // }
         System.out.println(ctrl.getCurrPlayer() + " is RED");
         System.out.println(ctrl.getPlayer2() + " is YELLOW");
         ConnectFourBoard<String> c4 = new ConnectFourBoard<>();
